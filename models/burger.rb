@@ -19,4 +19,11 @@ class Burger
   end
 
 
+
+  def self.all()
+    sql = "SELECT * FROM burgers;"
+    result = SqlRunner.run(sql)
+    burgers = result.map{|hash|Burger.new(hash)}
+  end
+
 end

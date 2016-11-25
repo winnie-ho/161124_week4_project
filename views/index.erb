@@ -1,0 +1,14 @@
+<h1>All Burgers!</h1>
+
+
+<%for burger in @burgers%>
+  <div>
+    <p>Type: <%= burger.name %> </p>
+    <p>Normally: £<%= burger.price %> </p>
+    <p>Restaurant: <%= burger.restaurant %> </p>
+    <p>Deal: <%= burger.deal %> </p>
+    <p>Offer available on: <%= burger.day_available %>s</p>
+  </div>
+<%end%>
+
+

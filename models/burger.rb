@@ -21,6 +21,12 @@ class Burger
     @id = result[0]["id"].to_i
   end
 
+  def day_available()
+    sql = "SELECT * FROM days WHERE id = #{@day_id};"
+    result = SqlRunner.run(sql)
+    return result[0]["name"]
+  end
+
 
 
   def self.all()

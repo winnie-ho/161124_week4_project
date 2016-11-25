@@ -35,13 +35,19 @@ day7.save()
 # adding a burger
 burger1 = Burger.new({
   "name" => "classic beef burger",
-  "price" => 5.90
+  "price" => 5.90,
+  "restaurant" => "Chanter",
+  "deal" => "2 for 1",
+  "day_id" => day5.id
   })
 burger1.save()
 
 burger2 = Burger.new({
   "name" => "cheese burger",
-  "price" => 5.20
+  "price" => 5.20,
+  "restaurant" => "Red Squirrel",
+  "deal" => "10%",
+  "day_id" => day2.id
   })
 burger2.save()
 

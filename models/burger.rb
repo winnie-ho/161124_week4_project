@@ -29,6 +29,12 @@ class Burger
 
 
 
+  def self.find(id)
+    sql = "SELECT * FROM burgers WHERE id = #{id};"
+    result = SqlRunner.run(sql)
+    return result[0]
+  end
+
   def self.all()
     sql = "SELECT * FROM burgers;"
     result = SqlRunner.run(sql)

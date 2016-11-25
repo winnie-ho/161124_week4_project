@@ -4,11 +4,10 @@
 <%for burger in @burgers%>
   <div>
     <p>Type: <%= burger.name %> </p>
-    <p>Normally: £<%= burger.price %> </p>
     <p>Restaurant: <%= burger.restaurant %> </p>
     <p>Deal: <%= burger.deal %> </p>
     <p>Offer available on: <%= burger.day_available %>s</p>
-    <a href = "burgers/edit">More Details</a>
+    <a href = "burgers/<%=burger.id%>/edit">More Details</a>
   </div>
 <%end%>
 

@@ -25,7 +25,7 @@ end
 
 # form to edit burger
 get '/burgers/:id/edit' do
-  @burger = burger.find(params[:id])
+  @burger = Burger.find( params[:id].to_i )
   erb(:edit)
 end
 

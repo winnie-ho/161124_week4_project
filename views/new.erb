@@ -10,13 +10,6 @@
 
   <p>
     <label>
-    Price:
-      <input type="text" name="price" />
-    </label>
-  </p>
-
-  <p>
-    <label>
     Restaurant:
       <input type="text" name="restaurant" />
     </label>
@@ -37,7 +30,7 @@
         <%for day in @days%>
           <option value="<%=day.id%>" > <%=day.name%></option>
         <%end%>
-        
+
       </select>
     </label>
   </p>

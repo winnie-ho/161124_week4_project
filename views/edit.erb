@@ -1,49 +1,81 @@
 <h1>Edit Burger</h1>
 
+<form action = "/burgers/<%= @burger.id %>" method = "post">
 
-<form action='/burgers' method='post'>
   <p>
     <label>
     Burger:
-      <input type="text" name="name" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-    Price:
-      <input type="text" name="price" />
+      <input type = "text" name = "name" value = "<%= @burger.name %>" />
     </label>
   </p>
 
   <p>
     <label>
     Restaurant:
-      <input type="text" name="restaurant" />
+      <input type = "text" name = "restaurant" value = "<%= @burger.restaurant %>" />
     </label>
   </p>
 
   <p>
     <label>
     Deal:
-      <input type="text" name="deal" />
+      <input type = "text" name = "deal" value = "<%= @burger.deal %>" />
     </label>
   </p>
 
   <p>
     <label>
     Day Available:
+    </label>
       <select name = "day_id">
 
-        <%for day in @days%>
-          <option value="<%=day.id%>" > <%=day.name%></option>
-        <%end%>
-        
+        <option 
+          <%= "selected" if @burger.day_available == "Monday" %>
+          value = "Monday">
+          Monday
+        </option>
+
+        <option 
+          <%= "selected" if @burger.day_available == "Tuesday" %>
+          value = "Tuesday">
+          Tuesday
+        </option>
+
+        <option 
+          <%= "selected" if @burger.day_available == "Wednesday" %>
+          value = "Wednesday">
+          Wednesday
+        </option>
+
+        <option 
+          <%= "selected" if @burger.day_available == "Thursday" %>
+          value = "Thursday">
+          Thursday
+        </option>
+
+        <option 
+          <%= "selected" if @burger.day_available == "Friday" %>
+          value = "Friday">
+          Friday
+        </option>
+
+        <option 
+          <%= "selected" if @burger.day_available == "Saturday" %>
+          value = "Saturday">
+          Saturday
+        </option>
+
+        <option 
+          <%= "selected" if @burger.day_available == "Sunday" %>
+          value = "Sunday">
+          Sunday
+        </option>
+
       </select>
-    </label>
   </p>
 
-  <input type = "submit" value = "Add Burger"></input>
+  <input type = "submit" value = "Update Burger">
 
 
 </form>
+

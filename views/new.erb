@@ -1,0 +1,48 @@
+<h1>Add a Burger</h1>
+
+<form action='/burgers' method='post'>
+  <p>
+    <label>
+    Burger:
+      <input type="text" name="name" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+    Price:
+      <input type="text" name="price" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+    Restaurant:
+      <input type="text" name="restaurant" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+    Deal:
+      <input type="text" name="deal" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+    Day Available:
+      <select name = "day_id">
+
+        <%for day in @days%>
+          <option value="<%=day.id%>" > <%=day.name%></option>
+        <%end%>
+        
+      </select>
+    </label>
+  </p>
+
+  <input type = "submit" value = "Add Burger"></input>
+
+
+</form>

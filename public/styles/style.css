@@ -9,6 +9,12 @@ p{
 
 a{
   font-family: tahoma;
+  margin: 10px;
+}
+
+a:hover{
+  font-family: tahoma;
+  text-decoration: none;
 }
 
 div{

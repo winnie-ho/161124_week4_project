@@ -16,4 +16,11 @@ class Day
     @id  = result[0]["id"].to_i
   end
 
+
+  def self.all()
+    sql = "SELECT * FROM days;"
+    result = SqlRunner.run(sql)
+    days = result.map{|day|Day.new(day)}
+  end
+
 end

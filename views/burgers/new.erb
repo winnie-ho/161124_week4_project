@@ -11,13 +11,22 @@
   <p>
     <label>
     Restaurant:
+
+      <select name = "restaurant_id">
+      <option selected disabled> Select </option>
+        <% for restaurant in @restaurants %>
+          <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
+        <% end %>
+
+      </select>
+
       <input type="text" name="restaurant" />
     </label>
   </p>
 
   <p>
     <label>
-    Deal:
+    Deal: 
       <input type="text" name="deal" />
     </label>
   </p>

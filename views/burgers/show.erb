@@ -1,10 +1,18 @@
 <h1>What's the Dealio?!</h1>
 
+<div class = "cards">
+  <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2>
+  <h2><%= @burger.restaurant %></h2>
 
-<h2> <%= @burger.deal %> on <%= @burger.name %> at the <%= @burger.restaurant %> only on <%= @burger.day_available %>s </h2> 
 
-<a href = "<%=@burger.id%>/edit">Edit Details</a>
+  <h2> only on <%= @burger.day_available %>s </h2> 
+  <p><%= @burger.restaurant %></p>
 
+
+
+  <a href = "<%=@burger.id%>/edit">Edit Details</a>
+
+</div>
 <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
   <input type = "submit" value = "Delete"/>
 </form>

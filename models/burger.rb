@@ -9,13 +9,13 @@ class Burger
   def initialize (options)
     @id = options["id"].to_i
     @name = options["name"]
-    @restaurant = options ["restaurant"]
+    @restaurant_id = options ["restaurant_id"]
     @deal = options ["deal"]
     @day_id = options["day_id"]
   end
 
   def save()
-    sql = "INSERT INTO burgers ( name, restaurant, deal, day_id ) VALUES ( '#{@name}', '#{@restaurant}', '#{@deal}', #{@day_id} ) RETURNING *;"
+    sql = "INSERT INTO burgers ( name, restaurant_id, deal, day_id ) VALUES ( '#{@name}', '#{@restaurant_id}', '#{@deal}', #{@day_id} ) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]["id"].to_i
   end
@@ -31,6 +31,11 @@ class Burger
     SqlRunner.run(sql)
   end
 
+  def restaurant()
+    sql = "SELECT * FROM restaurants WHERE id = #{@restaurant_id};"
+    result = SqlRunner.run(sql)
+    return result[0]["name"]
+  end
 
 
   def self.all()
@@ -48,12 +53,14 @@ class Burger
   def self.update(options)
     sql = "UPDATE burgers SET
           name = '#{options['name']}',
-          restaurant = '#{options['restaurant']}',
+          restaurant_id = '#{options['restaurant_id']}',
           deal = '#{options['deal']}',
           day_id = '#{options['day_id']}'
           WHERE id = '#{options['id']}';"
    SqlRunner.run(sql)
   end
+
+
 
   def self.delete(id)
     sql = "DELETE FROM burgers WHERE id = #{id};"

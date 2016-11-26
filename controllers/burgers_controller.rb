@@ -2,10 +2,12 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative ('../models/burger.rb')
 require_relative ('../models/day.rb')
+require_relative ('../models/restaurant.rb')
 
 
 # show all burgers
 get '/burgers' do
+  @restaurants = Restaurant.all()
   @burgers = Burger.all()
   @days = Day.all()
   erb(:"burgers/index")
@@ -13,6 +15,8 @@ end
 
 # form to add burger
 get '/burgers/new' do
+  @restaurants = Restaurant.all()
+  @burgers = Burger.all()
   @days = Day.all()
   erb(:"burgers/new")
 end
@@ -26,6 +30,7 @@ end
 
 # form to edit burger
 get '/burgers/:id/edit' do
+  @restaurants = Restaurant.all()
   @days = Day.all()
   @burger = Burger.find( params[:id])
   erb(:"burgers/edit")
@@ -40,6 +45,7 @@ end
 # show a burger by id
 get '/burgers/:id' do
   @burger = Burger.find(params[:id])
+  # @restaurant = Restaurant.find(params[:restaurant_id])
   erb(:"burgers/show")
 end
 

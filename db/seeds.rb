@@ -1,5 +1,6 @@
 require_relative ('../models/day')
 require_relative ('../models/burger')
+require_relative ('../models/restaurant')
 require ('pry-byebug')
 
 # inputting days of the week
@@ -39,11 +40,39 @@ day7 = Day.new({
 day7.save()
 
 
+
+
+# adding a database of restaurants in Edinburgh
+restaurant1 = Restaurant.new({
+  "name" => "Red Squirrel",
+  "address" => "21 Lothian Road, Edinburgh, EH1 2DJ",
+  "web" => "www.redsquirreledinburgh.co.uk",
+  "phone" => "0131 229 9933"
+  })
+restaurant1.save()
+
+restaurant2 = Restaurant.new({
+  "name" => "The Chanter",
+  "address" => "30-32 Bread St, Edinburgh EH3 9AF",
+  "web" => "www.thechanterpub.co.uk",
+  "phone" => "0131 221 0575"
+  })
+restaurant2.save()
+
+restaurant3 = Restaurant.new({
+  "name" => "Lebowskis",
+  "address" => "18 Morrison St, Edinburgh EH3 8BJ",
+  "web" => "www.lebowskis.co.uk/edinburgh/",
+  "phone" => "0131 466 1779"
+  })
+restaurant3.save()
+
+
+
 # adding a burger
 burger1 = Burger.new({
   "name" => "Classic Beef Burger",
-  "price" => 5.90,
-  "restaurant" => "Chanter",
+  "restaurant_id" => restaurant1.id,
   "deal" => "2 for 1",
   "day_id" => day5.id
   })
@@ -51,8 +80,7 @@ burger1.save()
 
 burger2 = Burger.new({
   "name" => "Cheese Burger",
-  "price" => 5.20,
-  "restaurant" => "Red Squirrel",
+  "restaurant_id" => restaurant2.id,
   "deal" => "10%",
   "day_id" => day2.id
   })
@@ -60,16 +88,11 @@ burger2.save()
 
 burger3 = Burger.new({
   "name" => "Veg Burger",
-  "price" => 5.20,
-  "restaurant" => "Red Squirrel",
+  "restaurant_id" => restaurant1.id,
   "deal" => "10%",
   "day_id" => day2.id
   })
 burger3.save()
-
-
-
-
 
 binding.pry
 nil

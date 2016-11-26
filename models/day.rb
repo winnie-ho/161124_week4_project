@@ -23,4 +23,10 @@ class Day
     days = result.map{|day|Day.new(day)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM days WHERE id = #{id};"
+    result = SqlRunner.run(sql)
+    day = Day.new(result[0])
+  end
+
 end

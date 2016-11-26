@@ -28,16 +28,30 @@ class Burger
 
 
 
-  def self.find(id)
-    sql = "SELECT * FROM burgers WHERE id = #{id};"
-    burger = SqlRunner.run(sql)
-    result = Burger.new(burger[0])
-  end
-
   def self.all()
     sql = "SELECT * FROM burgers;"
     result = SqlRunner.run(sql)
     burgers = result.map{|hash|Burger.new(hash)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM burgers WHERE id = #{id};"
+    burger = SqlRunner.run(sql)
+    result = Burger.new(burger[0])
+  end
+
+  def self.update(options)
+    sql = "UPDATE burgers SET
+          name = '#{options['name']}',
+          restaurant = '#{options['restaurant']}',
+          deal = '#{options['deal']}',
+          day_id = '#{options['day_id']}'
+          WHERE id = '#{options['id']}';"
+   SqlRunner.run(sql)
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM burgers WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
 end

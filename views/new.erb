@@ -26,10 +26,10 @@
     <label>
     Day Available:
       <select name = "day_id">
-
-        <%for day in @days%>
-          <option value="<%=day.id%>" > <%=day.name%></option>
-        <%end%>
+      <option selected disabled> Select Day </option>
+        <% for day in @days %>
+          <option value = "<%= day.id %>" > <%= day.name %> </option>
+        <% end %>
 
       </select>
     </label>

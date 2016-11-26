@@ -7,7 +7,9 @@
     <p>Restaurant: <%= burger.restaurant %> </p>
     <p>Deal: <%= burger.deal %> </p>
     <p>Offer available on: <%= burger.day_available %>s</p>
-    <a href = "burgers/<%=burger.id%>/edit">More Details</a>
+    <a href = "burgers/<%=burger.id%>/edit">Edit Details</a>
+    <a href = "burgers/<%=burger.id%>/delete">Delete Burger</a>
+    <a href = "burgers/<%=burger.id%>">View Burger</a>
   </div>
 <%end%>
 

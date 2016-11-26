@@ -24,57 +24,22 @@
   </p>
 
   <p>
-    <label>
-    Day Available:
-    </label>
-      <select name = "day_id">
+    <label> Day Available </label>
 
-        <option 
-          <%= "selected" if @burger.day_available == "Monday" %>
-          value = "Monday">
-          Monday
-        </option>
+<!-- NEED TO FIX THIS TO DEFAULT ON THE INTIALLY SELECTED DAY -->
+    <select name = "day_id">
+      <% for day in @days %>
+        <% if day.name == @burger.day_available %>
+          <option value = "<%= day.id %>" > <%= day.name %> </option>
+        <% else %>
+          <option selected value = "<%= day.id %>" > <%= day.name %> </option>
+        <% end %>
+      <% end %>  
+    </select>
 
-        <option 
-          <%= "selected" if @burger.day_available == "Tuesday" %>
-          value = "Tuesday">
-          Tuesday
-        </option>
-
-        <option 
-          <%= "selected" if @burger.day_available == "Wednesday" %>
-          value = "Wednesday">
-          Wednesday
-        </option>
-
-        <option 
-          <%= "selected" if @burger.day_available == "Thursday" %>
-          value = "Thursday">
-          Thursday
-        </option>
-
-        <option 
-          <%= "selected" if @burger.day_available == "Friday" %>
-          value = "Friday">
-          Friday
-        </option>
-
-        <option 
-          <%= "selected" if @burger.day_available == "Saturday" %>
-          value = "Saturday">
-          Saturday
-        </option>
-
-        <option 
-          <%= "selected" if @burger.day_available == "Sunday" %>
-          value = "Sunday">
-          Sunday
-        </option>
-
-      </select>
   </p>
 
-  <input type = "submit" value = "Update Burger">
+  <input type = "submit" value = "Update Burger"/>
 
 
 </form>

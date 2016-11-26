@@ -2,6 +2,10 @@ h1{
   font-family: tahoma;
 }
 
+h2{
+  font-family: tahoma;
+}
+
 
 p{
   font-family: tahoma;
@@ -23,3 +27,4 @@ div{
   padding:10px;
   margin: 10px;
 }
+

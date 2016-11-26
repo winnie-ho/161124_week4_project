@@ -59,7 +59,6 @@ burger2 = Burger.new({
 burger2.save()
 
 
-
 binding.pry
 nil
 

@@ -23,11 +23,26 @@ a:hover{
   text-decoration: none;
 }
 
-div{
+.cards{
   border: solid 1px gray;
   border-radius: 5px;
   padding:10px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+
+}
+
+.container{
+  padding: 20px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  margin: 20px;
+  align-content: center;
+
+  
 }
 
 label{
@@ -35,5 +50,8 @@ label{
 }
 
 body{
-
+  align-content: center;
+  margin: 20px;
 }
+
+

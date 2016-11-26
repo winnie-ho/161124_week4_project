@@ -12,14 +12,15 @@
 </form>
 
 
+<div class = "container">
+  <%for burger in @found_burgers%>
+    <div class = "cards">
+      <p>Type: <%= burger.name %> </p>
+      <p>Restaurant: <%= burger.restaurant %> </p>
+      <p>Deal: <%= burger.deal %> </p>
+      <p>Offer available on: <%= burger.day_available %>s</p>
 
-<%for burger in @found_burgers%>
-  <div>
-    <p>Type: <%= burger.name %> </p>
-    <p>Restaurant: <%= burger.restaurant %> </p>
-    <p>Deal: <%= burger.deal %> </p>
-    <p>Offer available on: <%= burger.day_available %>s</p>
-
-    <a href = "/burgers/<%=burger.id%>">View Burger</a>
-  </div>
-<%end%>
+      <a href = "/burgers/<%=burger.id%>">View Burger</a>
+    </div>
+  <%end%>
+</div>

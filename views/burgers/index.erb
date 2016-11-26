@@ -1,6 +1,5 @@
 <h1>All Burgers!</h1>
 
-
 <form action='/days/day.id' method='get'>
   <label>Find deals by day</label>
 
@@ -15,15 +14,18 @@
     <input type = "submit" value = "Find Burgers"></input>
 </form>
 
-<%for burger in @burgers%>
-  <div>
-    <p>Type: <%= burger.name %> </p>
-    <p>Restaurant: <%= burger.restaurant %> </p>
-    <p>Deal: <%= burger.deal %> </p>
-    <p>Offer available on: <%= burger.day_available %>s</p>
+<div class = "container">
 
-    <a href = "burgers/<%=burger.id%>">View Burger</a>
+  <%for burger in @burgers%>
+  <div class = "cards">
+      <p>Type: <%= burger.name %> </p>
+      <p>Restaurant: <%= burger.restaurant %> </p>
+      <p>Deal: <%= burger.deal %> </p>
+      <p>Offer available on: <%= burger.day_available %>s</p>
+
+      <a href = "burgers/<%=burger.id%>">View Burger</a>
   </div>
-<%end%>
+  <%end%>
 
+</div>
 

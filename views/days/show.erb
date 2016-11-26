@@ -1,4 +1,16 @@
-<h1>Burger Deals available on </h1>
+<h1>Burger Deals available on <%=@day.name%></h1>
+
+<form action='/days/day.id' method='get'>
+  <label>Find deals by day</label>
+      <select name = "day_id">
+        <option selected disabled> Select Day </option>
+          <% for day in @days %>
+            <option value = "<%= day.id %>" > <%= day.name %> </option>
+          <% end %>
+      </select>
+    <input type = "submit" value = "Find Burgers"></input>
+</form>
+
 
 
 <%for burger in @found_burgers%>

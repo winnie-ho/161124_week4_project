@@ -1,5 +1,15 @@
 <h1>All Burgers!</h1>
 
+<label>Find deals by day</label>
+
+<select name = "day_id">
+<option selected disabled> Select Day </option>
+  <% for day in @days %>
+    <option value = "<%= day.id %>" > <%= day.name %> </option>
+  <% end %>
+
+</select>
+
 
 <%for burger in @burgers%>
   <div>
@@ -7,8 +17,7 @@
     <p>Restaurant: <%= burger.restaurant %> </p>
     <p>Deal: <%= burger.deal %> </p>
     <p>Offer available on: <%= burger.day_available %>s</p>
-    <a href = "burgers/<%=burger.id%>/edit">Edit Details</a>
-    <a href = "burgers/<%=burger.id%>/delete">Delete Burger</a>
+
     <a href = "burgers/<%=burger.id%>">View Burger</a>
   </div>
 <%end%>

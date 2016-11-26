@@ -1,9 +1,11 @@
 h1{
   font-family: tahoma;
+  text-align: center;
 }
 
 h2{
   font-family: tahoma;
+  text-align: center;
 }
 
 
@@ -28,3 +30,6 @@ div{
   margin: 10px;
 }
 
+label{
+  font-family: tahoma;
+}

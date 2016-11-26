@@ -2,3 +2,9 @@
 
 
 <h2> <%= @burger.deal %> on <%= @burger.name %> at the <%= @burger.restaurant %> only on <%= @burger.day_available %>s </h2> 
+
+<a href = "<%=@burger.id%>/edit">Edit Details</a>
+
+<form action = "/burgers/<%= @burger.id %>/delete" method = "post">
+  <input type = "submit" value = "Delete"/>
+</form>

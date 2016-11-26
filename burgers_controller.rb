@@ -7,6 +7,7 @@ require_relative ('models/day.rb')
 # show all burgers
 get '/burgers' do
   @burgers = Burger.all()
+  @days = Day.all()
   erb(:index)
 end
 
@@ -26,7 +27,7 @@ end
 # form to edit burger
 get '/burgers/:id/edit' do
   @days = Day.all()
-  @burger = Burger.find( params[:id].to_i )
+  @burger = Burger.find( params[:id])
   erb(:edit)
 end
 
@@ -45,14 +46,9 @@ end
 
 # delete a burger from the db
 post '/burgers/:id/delete' do
-  Burger.delete(params[:id].to_i)
+  Burger.delete(params[:id])
   redirect to ('/burgers')
 end
-
-
-
-
-
 
 
 

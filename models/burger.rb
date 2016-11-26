@@ -26,7 +26,10 @@ class Burger
     return result[0]["name"]
   end
 
-
+  def delete(id)
+    sql = "DELETE FROM burgers WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
 
   def self.all()
     sql = "SELECT * FROM burgers;"

@@ -1,0 +1,33 @@
+<h1>All Burgers!</h1>
+
+<label>Find deals by day</label>
+
+<select name = "day_id">
+  <option selected disabled> Select Day </option>
+    <% for day in @days %>
+      <option value = "<%= day.id %>" > <%= day.name %> </option>
+    <% end %>
+</select>
+
+
+
+<!-- <form action = "/days" method = "get">
+  <input type = "submit" =  value = "Find" />
+</form> -->
+
+
+    <a href = "/days/:day_id"> Find </a>
+
+
+<%for burger in @burgers%>
+  <div>
+    <p>Type: <%= burger.name %> </p>
+    <p>Restaurant: <%= burger.restaurant %> </p>
+    <p>Deal: <%= burger.deal %> </p>
+    <p>Offer available on: <%= burger.day_available %>s</p>
+
+    <a href = "burgers/<%=burger.id%>">View Burger</a>
+  </div>
+<%end%>
+
+

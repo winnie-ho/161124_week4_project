@@ -58,6 +58,18 @@ burger2 = Burger.new({
   })
 burger2.save()
 
+burger3 = Burger.new({
+  "name" => "Veg Burger",
+  "price" => 5.20,
+  "restaurant" => "Red Squirrel",
+  "deal" => "10%",
+  "day_id" => day2.id
+  })
+burger3.save()
+
+
+
+
 
 binding.pry
 nil

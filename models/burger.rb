@@ -31,6 +31,8 @@ class Burger
     SqlRunner.run(sql)
   end
 
+
+
   def self.all()
     sql = "SELECT * FROM burgers;"
     result = SqlRunner.run(sql)
@@ -57,4 +59,12 @@ class Burger
     sql = "DELETE FROM burgers WHERE id = #{id};"
     SqlRunner.run(sql)
   end
+
+  def self.day_sort(day_id)
+    sql = "SELECT * FROM burgers WHERE day_id = #{day_id}"
+    burger_hash = SqlRunner.run(sql)
+    result = burger_hash.map{|hash|Burger.new(hash)}
+  end
+  
 end
+

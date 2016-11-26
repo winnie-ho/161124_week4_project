@@ -1,0 +1,13 @@
+<h1>Show burger by day</h1>
+
+
+<%for burger in @found_burgers%>
+  <div>
+    <p>Type: <%= burger.name %> </p>
+    <p>Restaurant: <%= burger.restaurant %> </p>
+    <p>Deal: <%= burger.deal %> </p>
+    <p>Offer available on: <%= burger.day_available %>s</p>
+
+    <a href = "burgers/<%=burger.id%>">View Burger</a>
+  </div>
+<%end%>

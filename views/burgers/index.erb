@@ -14,18 +14,28 @@
     <input class = "btn" type = "submit" value = "Find"></input>
 </form>
 
-<div class = "container">
+<div class ="container">
 
-  <%for burger in @burgers%>
-  <div class = "cards">
-      <p><span>Burger:</span> <%= burger.name %> </p>
-      <p><span>Restaurant:</span> <%= burger.restaurant["name"] %> </p>
-      <p><span>Deal: </span> <%= burger.deal %> </p>
-      <p><span>Offer available on:</span> <%= burger.day_available %>s</p>
+    <ul class="table_header">
+      <li class="table_item"> <h3>Burger</h3> </li>
+      <li class="table_item"> <h3>Restaurant</h3> </li>
+      <li class="table_item"> <h3>Deal</h3> </li>
+      <li class="table_item"> <h3>Available</h3> </li>
+      <li class="table_item"> <h3>View</h3></li>
+    </ul>
 
-      <a href = "burgers/<%=burger.id%>">View Burger</a>
-  </div>
-  <%end%>
-
+    <%for burger in @burgers%>
+      <ul class="table_container">
+          <li class="table_item"> <p> <%= burger.name %> </p> </li>
+          <li class="table_item"> <p> <%= burger.restaurant["name"] %> </p> </li>
+          <li class="table_item"> <p> <%= burger.deal %> </p> </li>
+          <li class="table_item"> <p> <%= burger.day_available %>s </p> </li>
+          <li class="table_item"> <a href = "burgers/<%=burger.id%>">See Details</a></li>
+      </ul>
+    <%end%>
 </div>
+
+
+
+
 

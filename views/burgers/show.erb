@@ -1,14 +1,14 @@
 <h2>WHAT'S THE DEALIO?!</h2>
 
-<div class = "details_box">
+<div class = "details_container">
 
-  <div class = "details_text">
-    <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2>
-    <h2> only on <%= @burger.day_available %>s </h2> 
-    <h3><%= @burger.restaurant["name"] %></h3>
-    <p><a href = <%= @burger.restaurant["web"] %> > website </a></p>
-
-    <p><%= @burger.restaurant["phone"] %></p>
+  <ul class = "details_box">
+    <li class = "details_text"> <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2> </li>
+    <li class = "details_text"> <h2> only on <%= @burger.day_available %>s </h2> </li>
+    <li class = "details_text"> <h4><%= @burger.restaurant["name"] %></h4> </li>
+    <li class = "details_text"> <a href = <%= @burger.restaurant["web"] %> style = "margin-left: -2px" > <%= @burger.restaurant["web"] %> </a> </li>
+    <li class = "details_text"> <p><%= @burger.restaurant["phone"] %></p> </li>
+    
 
   <p>
     <form action = "<%= @burger.id %>/edit" method = "get">
@@ -20,7 +20,7 @@
     </form>
   </p>
   
-  </div>
+  </ul>
 
   <div class = "details_map">
     <img src = <%= @burger.restaurant["map"]  %> />

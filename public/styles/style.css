@@ -154,8 +154,20 @@ body{
 
 input{
   width: 100px;
+  border-radius: 3px;
 }
 
 input:hover{
+  color: dodgerblue;
+  background-color: greenyellow
+}
+
+hr{
+  border: 1px greenyellow solid;
+  margin-top: -15px;
+}
+
+span{
   color: greenyellow;
+  font-weight: bold;
 }

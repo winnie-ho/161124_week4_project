@@ -1,7 +1,7 @@
 <h2>AWW THE BURRRGGGERS</h2>
 
 <form action='/days/day.id' method='get'>
-  <label style = "margin-left:20px">Find deals by day</label>
+  <label style = "margin-left:20px"> Find deals by day </label>
 
   <select name = "day_id">
 
@@ -18,10 +18,10 @@
 
   <%for burger in @burgers%>
   <div class = "cards">
-      <p><strong>Burger:</strong> <%= burger.name %> </p>
-      <p><strong>Restaurant:</strong> <%= burger.restaurant["name"] %> </p>
-      <p><strong>Deal: </strong> <%= burger.deal %> </p>
-      <p><strong>Offer available on:</strong> <%= burger.day_available %>s</p>
+      <p><span>Burger:</span> <%= burger.name %> </p>
+      <p><span>Restaurant:</span> <%= burger.restaurant["name"] %> </p>
+      <p><span>Deal: </span> <%= burger.deal %> </p>
+      <p><span>Offer available on:</span> <%= burger.day_available %>s</p>
 
       <a href = "burgers/<%=burger.id%>">View Burger</a>
   </div>

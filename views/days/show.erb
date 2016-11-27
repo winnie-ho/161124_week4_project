@@ -14,18 +14,18 @@
 <div class = "container">
   <%for burger in @found_burgers%>
     <div class = "cards">
-      <p><strong>Burger:</strong> <%= burger.name %> </p>
-      <p><strong>Restaurant:</strong> <%= burger.restaurant["name"] %> </p>
-      <p><strong>Deal:</strong> <%= burger.deal %> </p>
-      <p><strong>Offer available on:</strong> <%= burger.day_available %>s</p>
+      <p><span>Burger:</span> <%= burger.name %> </p>
+      <p><span>Restaurant:</span> <%= burger.restaurant["name"] %> </p>
+      <p><span>Deal:</span> <%= burger.deal %> </p>
+      <p><span>Offer available on:</span> <%= burger.day_available %>s</p>
 
       <a href = "/burgers/<%=burger.id%>">View Burger</a>
     </div>
   <%end%>
 
-<h2>
   <% if @found_burgers.count == 0 %>
-  <%= @emptys.shuffle[0] %> Empty BURGERBELLY on <%= @day.name %>s
+    <h2> <%= @emptys.shuffle[0] %> </h2>
+    <h2> <%= @day.name %>s </h2>
   <% end %>
-</h2>
+
 </div>

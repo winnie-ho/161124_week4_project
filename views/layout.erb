@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Burger Tracker</title>
+    <title> BurgerBelly</title>
     <link rel = "stylesheet", type = "text/css", href = "/styles/style.css"/>
     <link rel="icon" href="/images/burger_face.png" />
   </head>
   
   <body>
+  <div class = "header">
+    <div class = "bar">
+      <nav>
+          <a href = "/">HOME</a>
+          <a href = "/burgers"> ALL BURGERS </a>
+          <a href = "/burgers/new"> ADD NEW BURGER </a>
+      </nav>
+    </div>
 
-    <nav>
-        <a href = "/">HOME</a>
-        <a href = "/burgers"> ALL BURGERS </a>
-        <a href = "/burgers/new"> ADD NEW BURGER </a>
-    </nav>
+    <div class = bar_logo>
+        <h1>BURGERBELLY</h1>
+    </div>
 
+    </div>
 
-
-    <%= yield %>
+      <%= yield %>
 
   </body>
 </html>

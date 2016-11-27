@@ -1,24 +1,24 @@
-<h1>All Burgers!</h1>
+<h2>AWW THE BURRRGGGERS</h2>
 
 <form action='/days/day.id' method='get'>
-  <label>Find deals by day</label>
+  <label style = "margin-left:20px">Find deals by day</label>
 
   <select name = "day_id">
-    <option selected disabled> Select Day </option>
+
       <% for day in @days %>
         <option value = "<%= day.id %>" > <%= day.name %> </option>
       <% end %>
   </select>
 
 
-    <input type = "submit" value = "Find Burgers"></input>
+    <input class = "btn" type = "submit" value = "Find"></input>
 </form>
 
 <div class = "container">
 
   <%for burger in @burgers%>
   <div class = "cards">
-      <p><strong>Type:</strong> <%= burger.name %> </p>
+      <p><strong>Burger:</strong> <%= burger.name %> </p>
       <p><strong>Restaurant:</strong> <%= burger.restaurant["name"] %> </p>
       <p><strong>Deal: </strong> <%= burger.deal %> </p>
       <p><strong>Offer available on:</strong> <%= burger.day_available %>s</p>

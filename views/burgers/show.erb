@@ -1,24 +1,30 @@
-<h1>What's the Dealio?!</h1>
+<h2>WHAT'S THE DEALIO?!</h2>
 
-<div class = "cards">
-  <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2>
-  <h2> only on <%= @burger.day_available %>s </h2> 
-  <p><%= @burger.restaurant["name"] %></p>
-  <p><%= @burger.restaurant["web"] %></p>
-  <p><%= @burger.restaurant["phone"] %></p>
+<div class = "details_box">
 
-  <p><img src = <%= @burger.restaurant["map"] %> height = "500px"/> </p>
+  <div class = "details_text">
+    <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2>
+    <h2> only on <%= @burger.day_available %>s </h2> 
+    <h3><%= @burger.restaurant["name"] %></h3>
+    <p><a href = <%= @burger.restaurant["web"] %> > website </a></p>
 
+    <p><%= @burger.restaurant["phone"] %></p>
 
+  <p>
+    <form action = "<%= @burger.id %>/edit" method = "get">
+      <input class = "btn" type = "submit" value = "Edit"/>
+    </form>
+  &nbsp;
+    <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
+      <input class = "btn" type = "submit" value = "Delete"/>
+    </form>
+  </p>
+  
+  </div>
 
+  <div class = "details_map">
+    <img src = <%= @burger.restaurant["map"]  %> />
+  </div>
 
-  <form action = "<%= @burger.id %>/edit" method = "get">
-    <input type = "submit" value = "Edit"/>
-  </form>
-
-
-  <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
-    <input type = "submit" value = "Delete"/>
-  </form>
 
 </div>

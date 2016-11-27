@@ -45,7 +45,6 @@ end
 # SHOW a burger by id
 get '/burgers/:id' do
   @burger = Burger.find(params[:id])
-  # @restaurant = Restaurant.find(params[:restaurant_id])
   erb(:"burgers/show")
 end
 

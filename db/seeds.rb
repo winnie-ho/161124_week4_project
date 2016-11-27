@@ -66,7 +66,7 @@ restaurant3 = Restaurant.new({
   "address" => "18 Morrison St, Edinburgh EH3 8BJ",
   "web" => "www.lebowskis.co.uk/edinburgh/",
   "phone" => "0131 466 1779",
-  "map"=> "map_lebowskis.png"
+  "map"=> "/images/map_lebowskis.png"
   })
 restaurant3.save()
 
@@ -91,7 +91,7 @@ burger2.save()
 
 burger3 = Burger.new({
   "name" => "Veg Burger",
-  "restaurant_id" => restaurant1.id,
+  "restaurant_id" => restaurant3.id,
   "deal" => "10%",
   "day_id" => day2.id
   })

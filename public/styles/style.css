@@ -1,57 +1,161 @@
+
+
 h1{
-  font-family: tahoma;
+  font-family: "opendyslexicmono";
   text-align: center;
+  color: greenyellow;
+  font-size: 25px;
 }
 
 h2{
-  font-family: tahoma;
+  font-family: "opendyslexicmono";
   text-align: center;
+  color: greenyellow;
 }
 
+h3{
+  font-family: "avenir";
+  color: white;
+}
 
 p{
-  font-family: tahoma;
+  font-family: "avenir";
+  color: white;
 }
 
 a{
-  font-family: tahoma;
+  font-family: "avenir";
   margin: 10px;
-}
-
-a:hover{
-  font-family: tahoma;
+  color: white;
   text-decoration: none;
 }
 
+a:hover{
+  font-family: "avenir";
+  text-decoration: none;
+  color: greenyellow;
+}
+
 .cards{
-  border: solid 1px gray;
+  border: solid 1px white;
   border-radius: 5px;
-  padding:10px;
+  padding: 10px;
   margin: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  align-content: center;
+  justify-content: space-between;
+}
+
+.details_box{
+  display: flex;
+  border: white 1px solid;
+  border-radius: 5px;
+  justify-content: center;
 
 }
+
+.details_text{
+
+  padding: 10px;
+  margin: 10px;
+}
+.details_text > h2{
+font-family: "avenir";
+text-align: left;
+}
+
+.details_map{
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  align-items: flex-end; 
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.details_map > img{
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  margin: 10px;
+  max-width: 60%;
+  max-height: 60%;
+}
+
 
 .container{
   padding: 20px;
-  border: solid 1px gray;
+  border: solid 1px white;;
   border-radius: 5px;
   margin: 20px;
-  align-content: center;
+  align-content: center; 
+}
 
-  
+.form{
+  display: flex;
+  padding: 20px;
+
+  margin: 20px;
+  align-content: center;
+  justify-content: center; 
+  text-align: left;
 }
 
 label{
-  font-family: tahoma;
+  font-family: "avenir";
+  color: white;
 }
 
 body{
   align-content: center;
+  background-color: dodgerblue;
   margin: 20px;
 }
 
+.front{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.front>div{
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.bar{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: stretch; 
+  margin-top: 30px;
+}
+.bar_logo{
+  display: inline-flex;
+  font-size: 10px;
+}
+
+.header{
+  margin-top:-20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.btn {
+  border: solid white 1px;
+  border-radius: 5px;
+  color: white;
+  background-color: dodgerblue;
+  font-family: "opendyslexicmono";
+}
+
+
+
+input{
+  width: 100px;
+}
+
+input:hover{
+  color: greenyellow;
+}

@@ -2,17 +2,23 @@
 
 <div class = "cards">
   <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2>
-  <h2><%= @burger.restaurant %></h2>
-
-
   <h2> only on <%= @burger.day_available %>s </h2> 
-  <p><%= @burger.restaurant %></p>
+  <p><%= @burger.restaurant["name"] %></p>
+  <p><%= @burger.restaurant["web"] %></p>
+  <p><%= @burger.restaurant["phone"] %></p>
+
+  <p><img src = <%= @burger.restaurant["map"] %> height = "500px"/> </p>
 
 
 
-  <a href = "<%=@burger.id%>/edit">Edit Details</a>
+
+  <form action = "<%= @burger.id %>/edit" method = "get">
+    <input type = "submit" value = "Edit"/>
+  </form>
+
+
+  <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
+    <input type = "submit" value = "Delete"/>
+  </form>
 
 </div>
-<form action = "/burgers/<%= @burger.id %>/delete" method = "post">
-  <input type = "submit" value = "Delete"/>
-</form>

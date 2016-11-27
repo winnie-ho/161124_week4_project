@@ -47,7 +47,8 @@ restaurant1 = Restaurant.new({
   "name" => "Red Squirrel",
   "address" => "21 Lothian Road, Edinburgh, EH1 2DJ",
   "web" => "www.redsquirreledinburgh.co.uk",
-  "phone" => "0131 229 9933"
+  "phone" => "0131 229 9933",
+  "map" => "/images/map_redsquirrel.png"
   })
 restaurant1.save()
 
@@ -55,7 +56,8 @@ restaurant2 = Restaurant.new({
   "name" => "The Chanter",
   "address" => "30-32 Bread St, Edinburgh EH3 9AF",
   "web" => "www.thechanterpub.co.uk",
-  "phone" => "0131 221 0575"
+  "phone" => "0131 221 0575",
+  "map" => "/images/map_thechanter.png"
   })
 restaurant2.save()
 
@@ -63,7 +65,8 @@ restaurant3 = Restaurant.new({
   "name" => "Lebowskis",
   "address" => "18 Morrison St, Edinburgh EH3 8BJ",
   "web" => "www.lebowskis.co.uk/edinburgh/",
-  "phone" => "0131 466 1779"
+  "phone" => "0131 466 1779",
+  "map"=> "map_lebowskis.png"
   })
 restaurant3.save()
 

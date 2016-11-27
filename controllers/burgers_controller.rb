@@ -13,7 +13,7 @@ get '/burgers' do
   erb(:"burgers/index")
 end
 
-# form to add burger
+# form to add NEW burger
 get '/burgers/new' do
   @restaurants = Restaurant.all()
   @burgers = Burger.all()
@@ -28,7 +28,7 @@ post '/burgers' do
   redirect to ('/burgers')
 end
 
-# form to edit burger
+# form to EDIT burger
 get '/burgers/:id/edit' do
   @restaurants = Restaurant.all()
   @days = Day.all()
@@ -36,13 +36,13 @@ get '/burgers/:id/edit' do
   erb(:"burgers/edit")
 end
 
-# acutally update burger details to db
+# acutally UPDATE burger details to db
 post '/burgers/:id' do
   @burger = Burger.update(params)
   redirect to ('/burgers')
 end
 
-# show a burger by id
+# SHOW a burger by id
 get '/burgers/:id' do
   @burger = Burger.find(params[:id])
   # @restaurant = Restaurant.find(params[:restaurant_id])
@@ -50,7 +50,7 @@ get '/burgers/:id' do
 end
 
 
-# delete a burger from the db
+# DELETE a burger from the db
 post '/burgers/:id/delete' do
   Burger.delete(params[:id])
   redirect to ('/burgers')

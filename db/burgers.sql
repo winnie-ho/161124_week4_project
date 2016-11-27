@@ -8,7 +8,8 @@ id SERIAL8 primary key,
 name VARCHAR(255),
 address TEXT,
 web TEXT,
-phone VARCHAR(255)
+phone VARCHAR(255),
+map TEXT
 );
 
 CREATE TABLE days(

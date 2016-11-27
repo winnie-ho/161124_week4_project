@@ -19,7 +19,7 @@
   <%for burger in @burgers%>
   <div class = "cards">
       <p><strong>Type:</strong> <%= burger.name %> </p>
-      <p><strong>Restaurant:</strong> <%= burger.restaurant %> </p>
+      <p><strong>Restaurant:</strong> <%= burger.restaurant["name"] %> </p>
       <p><strong>Deal: </strong> <%= burger.deal %> </p>
       <p><strong>Offer available on:</strong> <%= burger.day_available %>s</p>
 

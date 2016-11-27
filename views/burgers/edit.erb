@@ -9,11 +9,11 @@
     </label>
   </p>
 
+<!-- NEED TO FIX THIS TO DEFAULT ON THE INTIALLY SELECTED DAY -->
   <p>
     <label>
     Restaurant:
       <select name = "restaurant_id">
-            <option selected disabled> Select </option>
               <% for restaurant in @restaurants %>
                 <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
               <% end %>
@@ -23,6 +23,7 @@
         <input type="text" name="restaurant" />
     </label>
   </p>  
+  
   <p>        
     <label>
     Deal:

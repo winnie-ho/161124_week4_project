@@ -3,7 +3,7 @@ require_relative ('../db/sql_runner')
 
 class Restaurant
 
-  attr_accessor :name, :address, :web, :phone
+  attr_accessor :name, :address, :web, :phone, :map
   attr_reader :id
 
   def initialize (options)
@@ -12,10 +12,11 @@ class Restaurant
     @address = options ["address"]
     @web = options ["web"]
     @phone = options["phone"]
+    @map = options["map"]
   end
 
   def save()
-    sql = "INSERT INTO restaurants ( name, address, web, phone) VALUES ( '#{@name}', '#{@address}', '#{@web}', '#{@phone}' ) RETURNING *;"
+    sql = "INSERT INTO restaurants ( name, address, web, phone, map) VALUES ( '#{@name}', '#{@address}', '#{@web}', '#{@phone}', '#{@map}') RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]["id"].to_i
   end
@@ -40,6 +41,7 @@ class Restaurant
           address = '#{options['address']}',
           web = '#{options['web']}',
           phone = '#{options['phone']}'
+          map = '#{options['map']}'
           WHERE id = '#{options['id']}';"
    SqlRunner.run(sql)
   end

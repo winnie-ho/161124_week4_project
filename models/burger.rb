@@ -3,7 +3,7 @@ require_relative ('../db/sql_runner')
 
 class Burger
 
-  attr_accessor :name, :restaurant, :deal, :day_id
+  attr_accessor :name, :restaurant_id, :deal, :day_id
   attr_reader :id
 
   def initialize (options)
@@ -15,7 +15,7 @@ class Burger
   end
 
   def save()
-    sql = "INSERT INTO burgers ( name, restaurant_id, deal, day_id ) VALUES ( '#{@name}', '#{@restaurant_id}', '#{@deal}', #{@day_id} ) RETURNING *;"
+    sql = "INSERT INTO burgers ( name, restaurant_id, deal, day_id ) VALUES ( '#{@name}', #{@restaurant_id}, '#{@deal}', #{@day_id} ) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]["id"].to_i
   end
@@ -34,7 +34,7 @@ class Burger
   def restaurant()
     sql = "SELECT * FROM restaurants WHERE id = #{@restaurant_id};"
     result = SqlRunner.run(sql)
-    return result[0]["name"]
+    return result[0]
   end
 
 

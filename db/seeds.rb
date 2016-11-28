@@ -91,7 +91,7 @@ burger2.save()
 
 burger3 = Burger.new({
   "name" => "Veg Burger",
-  "restaurant_id" => restaurant3.id,
+  "restaurant_id" => restaurant2.id,
   "deal" => "10%",
   "day_id" => day2.id
   })

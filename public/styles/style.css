@@ -68,6 +68,15 @@ a:hover{
   font-size: 15px;
 }
 
+.restaurant_table_item {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  line-height: 20px;
+  font-size: 15px;
+}
+
 .details_container{
   border: 1px solid white;
   border-radius: 5px;

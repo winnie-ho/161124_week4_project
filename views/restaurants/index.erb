@@ -12,11 +12,11 @@
 
     <%for restaurant in @restaurants%>
       <ul class="table_container">
-          <li class="table_item"> <p> <%= restaurant.name %> </p> </li>
-          <li class="table_item"> <p> <%= restaurant.address %> </p> </li>
-          <li class="table_item"> <p> <%= restaurant.web %> </p> </li>
-          <li class="table_item"> <p> <%= restaurant.phone%> </p> </li>
-          <li class="table_item"> <a href = "restaurants/<%=restaurant.id%>"> See Deals</a></li>
+          <li class="restaurant_table_item"> <p> <%= restaurant.name %> </p> </li>
+          <li class="restaurant_table_item"> <p> <%= restaurant.address %> </p> </li>
+          <li class="restaurant_table_item"> <p> <%= restaurant.web %> </p> </li>
+          <li class="restaurant_table_item"> <p> <%= restaurant.phone%> </p> </li>
+          <li class="restaurant_table_item"> <a href = "restaurants/<%=restaurant.id%>/burgers"> See Deals</a></li>
 
       </ul>
     <%end%>

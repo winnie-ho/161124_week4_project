@@ -38,11 +38,13 @@ end
 #   redirect to ('/burgers')
 # end
 
-# # show a burger by id
-# get '/burgers/:id' do
-#   @burger = Burger.find(params[:id])
-#   erb(:"burgers/show")
-# end
+# show a burgers for a particular restaurant
+get '/restaurants/:id/burgers' do
+  @days = Day.all()
+  @restaurant = Restaurant.find(params[:id])
+  @burgers = @restaurant.burgers()
+  erb(:"restaurants/show")
+end
 
 
 # # delete a burger from the db

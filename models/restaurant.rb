@@ -21,7 +21,11 @@ class Restaurant
     @id = result[0]["id"].to_i
   end
 
-
+  def burgers()
+    sql = "SELECT * FROM burgers WHERE restaurant_id = #{id};"
+    result = SqlRunner.run(sql)
+    burgers = result.map{|hash|Burger.new(hash)}
+  end
 
   def self.all()
     sql = "SELECT * FROM restaurants;"

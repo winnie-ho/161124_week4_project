@@ -14,11 +14,11 @@
     <label>
     Restaurant:
       <select name = "restaurant_id">
-              <% for restaurant in @restaurants %>
-                <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
-              <% end %>
-
-            </select>
+        <% for restaurant in @restaurants %>
+          <option <%= "selected" if restaurant.name == @burger.restaurant["name"] %>
+          value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
+        <% end %>
+      </select>
 
         <input type="text" name="restaurant" />
     </label>

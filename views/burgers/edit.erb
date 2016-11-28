@@ -34,14 +34,15 @@
   <p>
     <label> Day Available </label>
 
-<!-- NEED TO FIX THIS TO DEFAULT ON THE INTIALLY SELECTED DAY -->
+
     <select name = "day_id">
+
+
+
+
       <% for day in @days %>
-        <% if day.name == @burger.day_available %>
-          <option value = "<%= day.id %>" > <%= day.name %> </option>
-        <% else %>
-          <option selected value = "<%= day.id %>" > <%= day.name %> </option>
-        <% end %>
+          <option <%= "selected" if day.name == @burger.day_available %> 
+         value = "<%= day.id %>" > <%= day.name %> </option>
       <% end %>  
     </select>
 

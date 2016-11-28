@@ -43,6 +43,7 @@ get '/restaurants/:id/burgers' do
   @days = Day.all()
   @restaurant = Restaurant.find(params[:id])
   @burgers = @restaurant.burgers()
+  @emptys = Empty.all
   erb(:"restaurants/show")
 end
 

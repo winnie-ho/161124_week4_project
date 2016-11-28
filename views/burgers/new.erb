@@ -1,52 +1,57 @@
 <h2>FEED THE BURGERBELLY</h2>
 
 <div class = "form">
-<form action='/burgers' method='post'>
-  <p>
-    <label>
-    Burger:
-      <input type="text" name="name" />
-    </label>
-  </p>
+  <form action='/burgers' method='post'>
+    <p>
+      <label>
+      Burger:
+        <input class = "burger_text" type="text" name="name" />
+      </label>
+    </p>
 
-  <p>
-    <label>
-    Restaurant:
-
-      <select name = "restaurant_id">
-      <option selected disabled> Select </option>
-        <% for restaurant in @restaurants %>
-          <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
-        <% end %>
-
-      </select>
-
-      <input type="text" name="restaurant" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-    Deal: 
-      <input type="text" name="deal" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-    Day Available:
-      <select name = "day_id">
-      <option selected disabled> Select Day </option>
-        <% for day in @days %>
-          <option value = "<%= day.id %>" > <%= day.name %> </option>
-        <% end %>
-
-      </select>
-    </label>
-  </p>
-
-  <input class = "btn" type = "submit" value = "Add Burger"></input>
+    <p>
+      <label>
+      Restaurant:
+        <select class = restaurant_select name = "restaurant_id">
 
 
-</form>
+          <option selected disabled> Select </option>
+            <% for restaurant in @restaurants %>
+                <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
+            <% end %>
+
+          <input class = "restaurant_text" type="text" name="restaurant" />
+
+
+
+
+
+        </select>
+      </label>
+    </p>
+
+    <p>
+      <label>
+      Deal: 
+        <input class = "deal_text" type="text" name="deal" />
+      </label>
+    </p>
+
+    <p>
+      <label>
+      Day Available:
+        <select name = "day_id">
+        <option selected disabled> Select Day </option>
+          <% for day in @days %>
+            <option value = "<%= day.id %>" > <%= day.name %> </option>
+          <% end %>
+
+        </select>
+      </label>
+    </p>
+
+    <input style = "margin: 0px" class = "btn" type = "submit" value = "Add Burger"></input>
+
+
+  </form>
 </div>

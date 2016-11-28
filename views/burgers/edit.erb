@@ -33,19 +33,12 @@
 
   <p>
     <label> Day Available </label>
-
-
     <select name = "day_id">
-
-
-
-
       <% for day in @days %>
           <option <%= "selected" if day.name == @burger.day_available %> 
          value = "<%= day.id %>" > <%= day.name %> </option>
       <% end %>  
     </select>
-
   </p>
 
   <input class = "btn" type = "submit" value = "Update"/>

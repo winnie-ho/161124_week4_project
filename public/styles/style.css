@@ -182,13 +182,34 @@ body{
   color: white;
   background-color: dodgerblue;
   font-family: "opendyslexicmono";
+  width: 120px;
 }
 
+.burger_text{
+  width: 335px;
+}
 
+.deal_text{
+  width: 350px;
+  height: 100px;
+}
+
+.restaurant_text{
+  width: 158px;
+}
+
+.restaurant_select{
+  width: 150px;
+}
+
+option{
+  margin-right: 10px;
+}
 
 input{
-  width: 100px;
+  width: 200px;
   border-radius: 3px;
+  margin-left: 10px;
 }
 
 input:hover{

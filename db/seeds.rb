@@ -74,7 +74,7 @@ restaurant3.save()
 
 # adding a burger
 burger1 = Burger.new({
-  "name" => "Classic Beef Burger",
+  "name" => "Classic Beef",
   "restaurant_id" => restaurant1.id,
   "deal" => "2 for 1",
   "day_id" => day5.id

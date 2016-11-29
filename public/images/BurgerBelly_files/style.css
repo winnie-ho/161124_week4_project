@@ -50,23 +50,6 @@ a:hover{
   color: greenyellow;
 }
 
-.a_btn{
-  border: white 1px solid;
-  border-radius: 5px;
-  padding: 7px;
-  color: white;
-  width: 5px;
-  background-color: dodgerblue;
-  font-family: "opendyslexicmono";
-  font-size: 12px;
-  width: 60px;
-}
-.a_btn:hover{
-  background-color: greenyellow;
-  color: dodgerblue;
-  font-family: "opendyslexicmono";
-}
-
 .table_header {
   list-style: none;
   display: flex;
@@ -186,15 +169,20 @@ body{
   justify-content: center;
 }
 
+.front_image{
+  border: red dashed 1px;
+}
 
-.front_text{
+.front_text_1{
+  border: red dashed 1px;
   display: flex;
   flex-direction: column;
-  margin-top: -40px;
-  margin-left: 10px;
 }
-.front_text>h4{
-  margin-top: -80px;
+
+
+.front_text_2{
+  border: red dashed 1px;
+
 }
 
 

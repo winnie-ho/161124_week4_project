@@ -3,11 +3,12 @@
 <div class ="container">
 
     <ul class="table_header">
-      <li class="table_item"> <h3>Restaurant</h3> </li>
-      <li class="table_item"> <h3>Address</h3> </li>
-      <li class="table_item"> <h3>Website</h3> </li>
-      <li class="table_item"> <h3>Phone</h3> </li>
-      <li class="table_item"> <h3>Deals</h3></li>
+      <li class="table_item"> <img src = "images/icon_restaurant.png" style = "max-width: 10%"/> <h3>Restaurant</h3> </li>
+      <li class="table_item"> <img src = "images/icon_address.png" style = "max-width: 10%"/><h3>Address</h3> </li>
+      <li class="table_item"> <img src = "images/icon_web.png" style = "max-width: 10%"/><h3>Website</h3> </li>
+      <li class="table_item"> <img src = "images/icon_phone.png" style = "max-width: 10%"/><h3>Phone</h3> </li>
+      <li class="table_item"> <img src = "images/icon_offer.png" style = "max-width: 10%"/> <h3>Deals</h3></li>
+      
     </ul>
 
     <%for restaurant in @restaurants%>
@@ -17,6 +18,7 @@
           <li class="restaurant_table_item"> <p> <%= restaurant.web %> </p> </li>
           <li class="restaurant_table_item"> <p> <%= restaurant.phone%> </p> </li>
           <li class="restaurant_table_item"> <a href = "restaurants/<%=restaurant.id%>/burgers"> See Deals</a></li>
+
 
       </ul>
     <%end%>

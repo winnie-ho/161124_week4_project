@@ -22,7 +22,8 @@ id SERIAL8 primary key,
 name VARCHAR(255),
 restaurant_id INT8 references restaurants(id),
 deal VARCHAR (255),
-day_id INT8 references days(id)
+day_id INT8 references days(id),
+likes INT8
 );
 
 

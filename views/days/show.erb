@@ -19,13 +19,14 @@
 
   <% else %>
 
-    <ul class="table_header">
-      <li class="table_item"> <h3>Burger</h3> </li>
-      <li class="table_item"> <h3>Restaurant</h3> </li>
-      <li class="table_item"> <h3>Deal</h3> </li>
-      <li class="table_item"> <h3>Available</h3> </li>
-      <li class="table_item"> <h3>View</h3></li>
-    </ul>
+  <ul class="table_header">
+    <li class="table_item"> <img src = "/images/icon_burger.png" style = "max-width: 10%"/><h3>Burger</h3> </li>
+    <li class="table_item"> <img src = "/images/icon_restaurant.png" style = "max-width: 10%"/><h3>Restaurant</h3> </li>
+    <li class="table_item"> <img src = "/images/icon_offer.png" style = "max-width: 10%"/><h3>Deal</h3> </li>
+    <li class="table_item"> <img src = "/images/icon_day.png" style = "max-width: 10%"/><h3>Available</h3> </li>
+    <li class="table_item"> <img src = "/images/icon_view.png" style = "max-width: 10%"/><h3>View</h3></li>
+    <li class="table_item"> <img src = "/images/icon_fave.png" style = "max-width: 10%"/><h3>Bellylicious</h3></li>  
+  </ul>
 
     <%for burger in @found_burgers%>
         <ul class="table_container">
@@ -34,6 +35,8 @@
           <li class="table_item"> <p> <%= burger.deal %> </p> </li>
           <li class="table_item"> <p> <%= burger.day_available %>s </p> </li>
           <li class="table_item"> <a href = "../burgers/<%=burger.id%>">Details</a></li>
+          <li class="table_item"> <p> <%= burger.likes %> </p> </li>
+
         </ul>
     <%end%>
 

@@ -94,7 +94,8 @@ burger1 = Burger.new({
   "name" => "Classic Beef",
   "restaurant_id" => restaurant1.id,
   "deal" => "2 for 1",
-  "day_id" => day5.id
+  "day_id" => day5.id,
+  "likes" => 0
   })
 burger1.save()
 
@@ -102,7 +103,8 @@ burger2 = Burger.new({
   "name" => "Cheese Burger",
   "restaurant_id" => restaurant2.id,
   "deal" => "10%",
-  "day_id" => day2.id
+  "day_id" => day2.id,
+  "likes" => 0
   })
 burger2.save()
 
@@ -110,9 +112,11 @@ burger3 = Burger.new({
   "name" => "Veg Burger",
   "restaurant_id" => restaurant2.id,
   "deal" => "10%",
-  "day_id" => day2.id
+  "day_id" => day2.id,
+  "likes" => 0
   })
 burger3.save()
+
 
 binding.pry
 nil

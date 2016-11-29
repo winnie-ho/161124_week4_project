@@ -43,17 +43,29 @@ post '/burgers/:id' do
 end
 
 # SHOW a burger by id
+
 get '/burgers/:id' do
   @burger = Burger.find(params[:id])
   erb(:"burgers/show")
 end
-
 
 # DELETE a burger from the db
 post '/burgers/:id/delete' do
   Burger.delete(params[:id])
   redirect to ('/burgers')
 end
+
+# UPDATE burger if liked by burger id. Burger index page.
+post '/burgers/:id/burger/like' do
+  Burger.add_like(params[:id])
+  @restaurants = Restaurant.all()
+  @burgers = Burger.all()
+  @days = Day.all()
+  redirect to ('/burgers')
+end
+
+
+
 
 
 

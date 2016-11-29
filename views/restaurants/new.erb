@@ -8,7 +8,8 @@
          <label>
             Restaurant: 
             <select class = "restaurant_select" name = "restaurant_id">
-              <option selected disabled> Select </option>
+            <option "selected" value = <%=@restaurants.last.id%> > <%= @restaurants.last.name %> </option>
+
                 <% for restaurant in @restaurants %>
                     <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
                 <% end %>

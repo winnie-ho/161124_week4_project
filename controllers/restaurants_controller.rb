@@ -13,16 +13,17 @@ get '/restaurants' do
 end
 
 # form to add restaurant
-# get '/restaurant/new' do
-#   @restaurant = Restaurant.all()
-#   erb(:"restaurant/new")
-# end
+get '/restaurants/new' do
+  @restaurants = Restaurant.all()
+  @days = Day.all()
+  erb(:"restaurants/new")
+end
 
 # actually add burger from form to db
 post '/restaurants' do
   restaurant = Restaurant.new(params)
   restaurant.save()
-  redirect to ('/burgers/new')
+  redirect to ('/restaurants/new')
 end
 
 # # form to edit burger

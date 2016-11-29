@@ -54,7 +54,7 @@ restaurant1.save()
 
 restaurant2 = Restaurant.new({
   "name" => "The Chanter",
-  "address" => "30-32 Bread St, Edinburgh EH3 9AF",
+  "address" => "30-32 Bread St, Edinburgh, EH3 9AF",
   "web" => "www.thechanterpub.co.uk",
   "phone" => "0131 221 0575",
   "map" => "/images/map_thechanter.png"
@@ -63,13 +63,30 @@ restaurant2.save()
 
 restaurant3 = Restaurant.new({
   "name" => "Lebowskis",
-  "address" => "18 Morrison St, Edinburgh EH3 8BJ",
+  "address" => "18 Morrison St, Edinburgh, EH3 8BJ",
   "web" => "www.lebowskis.co.uk/edinburgh/",
   "phone" => "0131 466 1779",
   "map"=> "/images/map_lebowskis.png"
   })
 restaurant3.save()
 
+restaurant4 = Restaurant.new({
+  "name" => "Ryans Bar",
+  "address" => "Hope St, Edinburgh EH2 4DB",
+  "web" => "www.ryansbarandrestaurant.co.uk/",
+  "phone" => "0131 226 6669",
+  "map"=> "/images/map_ryansbar.png"
+  })
+restaurant4.save()
+
+restaurant4 = Restaurant.new({
+  "name" => "The Hanging Bat",
+  "address" => "133 Lothian Rd, Edinburgh EH3 9AB",
+  "web" => "www.thehangingbat.com",
+  "phone" => "0131 229 0759",
+  "map"=> "/images/map_thehangingbat.png"
+  })
+restaurant4.save()
 
 
 # adding a burger

@@ -22,9 +22,10 @@
   
   </ul>
 
-  <div class = "details_map">
-    <img src = <%= @burger.restaurant["map"]  %> />
-  </div>
 
-
+  <% if @burger.restaurant["map"].length>1 %>
+    <div class = "details_map">
+      <img src = <%= @burger.restaurant["map"]  %> />
+    </div>
+  <%end%>
 </div>

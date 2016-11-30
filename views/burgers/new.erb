@@ -1,66 +1,62 @@
 <h2>FEED THE BURGERBELLY</h2>
 
-<div class = "new_form">
+<div class = "form_container">
 
-
-    <form action='/burgers' method='post'>
-      <p>
-         <label>
-            Restaurant: 
-            <select class = "restaurant_select" name = "restaurant_id">
-              <option selected disabled> Select </option>
-                <% for restaurant in @restaurants %>
-                    <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
-                <% end %>
-            </select>
-          </label>
-       or 
-      </p>
-
-   
-          <p>
-            <label>
-            Burger:
-              <input class = "burger_text" type="text" name="name" />
-            </label>
-          </p>
-
-          <p>
-            <label>
-            Deal: 
-              <input class = "deal_text" type="text" name="deal" />
-            </label>
-          </p>
-
-          <p>
-            <label>
-            Day Available:
-              <select name = "day_id">
-              <option selected disabled> Select Day </option>
-                <% for day in @days %>
-                  <option value = "<%= day.id %>" > <%= day.name %> </option>
-                <% end %>
-
+  <div class = "new_form">
+      <form action='/burgers' method='post'>
+        <p>
+           <label>
+              Restaurant: 
+              <select class = "restaurant_select" name = "restaurant_id">
+                <option selected disabled> Select </option>
+                  <% for restaurant in @restaurants %>
+                      <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
+                  <% end %>
               </select>
             </label>
-          </p>
-
-        <input style = "margin: 0px" class = "btn" type = "submit" value = "Add Burger"></input>
-
-    </form>
-
-
-
-
-
-
-      <form action = '/restaurants' method = 'post'>
-        <p>   
-          <input class = "restaurant_text" type = "text" name = "name"/>      
-          <input class = "btn" type = "submit" value = "Add Restaurant"/>
+         or 
         </p>
-      </form>
- 
- 
 
+     
+            <p>
+              <label>
+              Burger:
+                <input class = "burger_text" type="text" name="name" />
+              </label>
+            </p>
+
+            <p>
+              <label>
+              Deal: 
+                <input class = "deal_text" type="text" name="deal" />
+              </label>
+            </p>
+
+            <p>
+              <label>
+              Day Available:
+                <select name = "day_id">
+                <option selected disabled> Select Day </option>
+                  <% for day in @days %>
+                    <option value = "<%= day.id %>" > <%= day.name %> </option>
+                  <% end %>
+
+                </select>
+              </label>
+            </p>
+
+          <input style = "margin: 0px" class = "btn" type = "submit" value = "Add Burger"></input>
+
+      </form>
+
+
+        <form action = '/restaurants' method = 'post'>
+          <p>   
+            <input class = "restaurant_text" type = "text" name = "name"/>      
+            <input class = "btn" type = "submit" value = "Add Restaurant"/>
+          </p>
+        </form>
+   
+  
+  </div>
 </div>

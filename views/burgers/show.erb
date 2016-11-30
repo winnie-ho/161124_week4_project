@@ -19,6 +19,10 @@
     <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
       <input class = "btn" type = "submit" value = "Delete"/>
     </form>
+  &nbsp;
+    <form action = "/burgers/<%= @burger.id %>/burger/like" method = "post">
+      <input class = "btn" type = "submit" value = "Like"/>
+    </form>
   </p>
   
   </ul>

@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative ('../models/burger.rb')
 require_relative ('../models/day.rb')
 require_relative ('../models/restaurant.rb')
+require('pry-byebug')
 
 
 # show all burgers
@@ -58,10 +59,7 @@ end
 # UPDATE burger if liked by burger id. Burger index page.
 post '/burgers/:id/burger/like' do
   Burger.add_like(params[:id])
-  @restaurants = Restaurant.all()
-  @burgers = Burger.all()
-  @days = Day.all()
-  redirect to ('/burgers')
+  redirect to (request.referer)
 end
 
 

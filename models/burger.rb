@@ -51,7 +51,7 @@ class Burger
   end
 
   def self.find(id)
-    sql = "SELECT * FROM burgers WHERE id = #{id} ORBER BY likes;"
+    sql = "SELECT * FROM burgers WHERE id = #{id} ORDER BY likes;"
     burger = SqlRunner.run(sql)
     result = Burger.new(burger[0])
   end

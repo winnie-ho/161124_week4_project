@@ -22,7 +22,7 @@ class Restaurant
   end
 
   def burgers()
-    sql = "SELECT * FROM burgers WHERE restaurant_id = #{id};"
+    sql = "SELECT * FROM burgers WHERE restaurant_id = #{id} ORDER by id;"
     result = SqlRunner.run(sql)
     burgers = result.map{|hash|Burger.new(hash)}
   end

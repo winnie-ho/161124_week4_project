@@ -134,7 +134,7 @@ a:hover{
 }
 
 .details_box{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -145,7 +145,7 @@ a:hover{
 .details_text{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   flex-grow: 1;
   flex-basis: 0;
   justify-content: space-around;
@@ -169,6 +169,14 @@ a:hover{
   max-width: 90%;
   max-height: 90%;
 }
+
+nav{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+}
+
 .form_container{
   display: flex;
   justify-content: center;

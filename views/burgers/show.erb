@@ -11,19 +11,20 @@
     <li class = "details_text"> <h5> Belly likes: <%= @burger.likes %> </h5> </li>
     
 
-  <p>
-    <form action = "<%= @burger.id %>/edit" method = "get">
-      <input class = "btn" type = "submit" value = "Edit"/>
-    </form>
+  <nav>
+    <form action = "/burgers/<%= @burger.id %>/like" method = "post">
+      <input class = "btn" type = "submit" value = "Like"/>
+    </form> 
   &nbsp;
     <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
       <input class = "btn" type = "submit" value = "Delete"/>
     </form>
   &nbsp;
-    <form action = "/burgers/<%= @burger.id %>/burger/like" method = "post">
-      <input class = "btn" type = "submit" value = "Like"/>
+    <form action = "<%= @burger.id %>/edit" method = "get">
+      <input class = "btn" type = "submit" value = "Edit"/>
     </form>
-  </p>
+  </nav>
+
   
   </ul>
 

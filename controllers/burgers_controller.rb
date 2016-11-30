@@ -57,7 +57,7 @@ post '/burgers/:id/delete' do
 end
 
 # UPDATE burger if liked by burger id. Burger index page.
-post '/burgers/:id/burger/like' do
+post '/burgers/:id/like' do
   Burger.add_like(params[:id])
   redirect to (request.referer)
 end

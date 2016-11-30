@@ -45,13 +45,13 @@ class Burger
 
 
   def self.all()
-    sql = "SELECT * FROM burgers ORDER BY id;"
+    sql = "SELECT * FROM burgers ORDER BY likes DESC;"
     result = SqlRunner.run(sql)
     burgers = result.map{|hash|Burger.new(hash)}
   end
 
   def self.find(id)
-    sql = "SELECT * FROM burgers WHERE id = #{id};"
+    sql = "SELECT * FROM burgers WHERE id = #{id} ORBER BY likes;"
     burger = SqlRunner.run(sql)
     result = Burger.new(burger[0])
   end
@@ -72,7 +72,7 @@ class Burger
   end
 
   def self.day_sort(day_id)
-    sql = "SELECT * FROM burgers WHERE day_id = #{day_id} ORDER BY likes;"
+    sql = "SELECT * FROM burgers WHERE day_id = #{day_id} ORDER BY likes DESC;"
     burger_hash = SqlRunner.run(sql)
     result = burger_hash.map{|hash|Burger.new(hash)}
   end

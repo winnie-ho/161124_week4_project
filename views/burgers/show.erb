@@ -3,8 +3,8 @@
 <div class = "details_container">
 
   <ul class = "details_box">
-    <li class = "details_text"> <h2> <%= @burger.deal %> on <%= @burger.name %>s</h2> </li>
-    <li class = "details_text"> <h2> on <%= @burger.day_available %>s </h2> </li>
+    <li class = "details_text"> <h2 style = "text-align: left"> <%= @burger.name %>s</h2> </li>
+    <li class = "details_text"> <h2> <%= @burger.deal %> on <%= @burger.day_available %>s </h2> </li>
     <li class = "details_text"> <h4> <%= @burger.restaurant["name"] %> </h4> </li>
     <li class = "details_text"> <a href = http://<%= @burger.restaurant["web"] %> style = "margin-left: -2px" > <%= @burger.restaurant["web"] %> </a> </li>
     <li class = "details_text"> <p><%= @burger.restaurant["phone"] %></p> </li>

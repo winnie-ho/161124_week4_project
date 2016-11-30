@@ -40,8 +40,6 @@ day7 = Day.new({
 day7.save()
 
 
-
-
 # adding a database of restaurants in Edinburgh
 restaurant1 = Restaurant.new({
   "name" => "Red Squirrel",
@@ -88,6 +86,32 @@ restaurant4 = Restaurant.new({
   })
 restaurant4.save()
 
+restaurant5 = Restaurant.new({
+  "name" => "Byron",
+  "address" => "113-117 Lothian Rd, Edinburgh, EH3 9AN",
+  "web" => "www.byronhamburgers.com/lothian-road/",
+  "phone" => "0131 229 0444",
+  "map"=> "/images/map_byron.png"
+  })
+restaurant5.save()
+
+restaurant6 = Restaurant.new({
+  "name" => "Burger",
+  "address" => "91-93 Shandwick Pl, Edinburgh EH2 4SD",
+  "web" => "www.burgeruk.co.uk",
+  "phone" => "0131 228 1429",
+  "map"=> "/images/map_burger.png"
+  })
+restaurant6.save()
+
+restaurant7 = Restaurant.new({
+  "name" => "Indigo Yard",
+  "address" => "7 Charlotte Ln, Edinburgh EH2 4QZ",
+  "web" => "www.indigoyardedinburgh.co.uk",
+  "phone" => "0131 220 5603",
+  "map"=> "/images/map_indigo_yard.png"
+  })
+restaurant7.save()
 
 # adding a burger
 burger1 = Burger.new({
@@ -120,4 +144,3 @@ burger3.save()
 
 binding.pry
 nil
-

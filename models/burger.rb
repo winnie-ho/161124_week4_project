@@ -7,9 +7,9 @@ class Burger
   attr_reader :id
 
   def initialize (options)
-    @id = options["id"].to_i
+    @id = options["id"]
     @name = options["name"]
-    @restaurant_id = options ["restaurant_id"].to_i
+    @restaurant_id = options ["restaurant_id"]
     @deal = options ["deal"]
     @day_id = options["day_id"]
     @likes = options ["likes"].to_i
@@ -62,12 +62,10 @@ class Burger
           restaurant_id = '#{options['restaurant_id']}',
           deal = '#{options['deal']}',
           day_id = '#{options['day_id']}'
-          likes = '#{options['likes']}'
-          WHERE id = '#{options['id']}';"
-   SqlRunner.run(sql)
+          WHERE id = #{options['id']};"
+      puts sql
+     SqlRunner.run(sql)
   end
-
-
 
   def self.delete(id)
     sql = "DELETE FROM burgers WHERE id = #{id};"

@@ -126,7 +126,7 @@ burger1.save()
 burger2 = Burger.new({
   "name" => "Cheese Burger",
   "restaurant_id" => restaurant2.id,
-  "deal" => "10%",
+  "deal" => "10% off",
   "day_id" => day2.id,
   "likes" => 0
   })
@@ -135,12 +135,110 @@ burger2.save()
 burger3 = Burger.new({
   "name" => "Veg Burger",
   "restaurant_id" => restaurant2.id,
-  "deal" => "10%",
+  "deal" => "10% off",
   "day_id" => day2.id,
   "likes" => 0
   })
 burger3.save()
 
+burger4 = Burger.new({
+  "name" => "The Chilli Death",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "2 for 1",
+  "day_id" => day2.id,
+  "likes" => 0
+  })
+burger4.save()
+
+burger5 = Burger.new({
+  "name" => "The Blue Murder",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "5% off",
+  "day_id" => day2.id,
+  "likes" => 0
+  })
+burger5.save()
+
+burger6 = Burger.new({
+  "name" => "The Red Squirrel",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "Free side",
+  "day_id" => day3.id,
+  "likes" => 0
+  })
+burger6.save()
+
+burger7 = Burger.new({
+  "name" => "The Mexican",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "10% off",
+  "day_id" => day7.id,
+  "likes" => 0
+  })
+burger7.save()
+
+burger8 = Burger.new({
+  "name" => "The Piggy",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "Free beer",
+  "day_id" => day6.id,
+  "likes" => 0
+  })
+burger8.save()
+
+burger9 = Burger.new({
+  "name" => "Big Burger",
+  "restaurant_id" => restaurant2.id,
+  "deal" => "Big Burger & a Drink £5.49",
+  "day_id" => day2.id,
+  "likes" => 0
+  })
+burger9.save()
+
+burger10 = Burger.new({
+  "name" => "Burger",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "Any burger & drink £5.50",
+  "day_id" => day6.id,
+  "likes" => 0
+  })
+burger10.save()
+
+burger11 = Burger.new({
+  "name" => "The Big Burger",
+  "restaurant_id" => restaurant3.id,
+  "deal" => "10% off",
+  "day_id" => day7.id,
+  "likes" => 0
+  })
+burger11.save()
+
+burger12 = Burger.new({
+  "name" => "The MacBowski",
+  "restaurant_id" => restaurant3.id,
+  "deal" => "Free soft drink",
+  "day_id" => day6.id,
+  "likes" => 0
+  })
+burger12.save()
+
+burger13 = Burger.new({
+  "name" => "Ryans Legend Burger",
+  "restaurant_id" => restaurant4.id,
+  "deal" => "15% off",
+  "day_id" => day3.id,
+  "likes" => 0
+  })
+burger13.save()
+
+burger14 = Burger.new({
+  "name" => "Cajun Chicken",
+  "restaurant_id" => restaurant1.id,
+  "deal" => "2 for 1",
+  "day_id" => day1.id,
+  "likes" => 0
+  })
+burger14.save()
 
 binding.pry
 nil

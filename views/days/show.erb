@@ -35,7 +35,11 @@
           <li class="table_item"> <p> <%= burger.deal %> </p> </li>
           <li class="table_item"> <p> <%= burger.day_available %>s </p> </li>
           <li class="table_item"> <a class = "a_btn" href = "../burgers/<%=burger.id%>">Details</a></li>
-          <li class="table_item"> <p> <%= burger.likes %> </p> </li>
+          <li class="table_item"> <p> <%= burger.likes %> </p> 
+            <form action = "/burgers/<%= burger.id %>/burger/like" method = "post">   
+              <input class = "btn" style = "width: 70px" type = "submit" value = "Like"/>
+            </form>
+          </li>
 
         </ul>
     <%end%>

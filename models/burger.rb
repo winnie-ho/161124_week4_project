@@ -63,7 +63,6 @@ class Burger
           deal = '#{options['deal']}',
           day_id = '#{options['day_id']}'
           WHERE id = #{options['id']};"
-      puts sql
      SqlRunner.run(sql)
   end
 

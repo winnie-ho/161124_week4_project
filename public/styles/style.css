@@ -106,7 +106,7 @@ a:hover{
 
 .table_header {
   list-style: none;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
 }

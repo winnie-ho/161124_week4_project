@@ -29,7 +29,7 @@
     <%for burger in @burgers%>
       <ul class="table_container">
           <li class="table_item"> <p> <%= burger.name %> </p> </li>
-          <li class="table_item"> <p> <a href = "restaurants/<%= burger.restaurant["id"] %>"> <%= burger.restaurant["name"] %> </a> </p> </li>
+          <li class="table_item"> <p> <a href = "restaurants/<%= burger.restaurant["id"] %>/burgers"> <%= burger.restaurant["name"] %> </a> </p> </li>
           <li class="table_item" style = "width: 500px"> <p> <%= burger.deal %> </p> </li>
           <li class="table_item"> <p> <%= burger.day_available %>s </p> </li>
           <li class="table_item"> <a class = "a_btn" href = "burgers/<%=burger.id%>"> Details</a></li>

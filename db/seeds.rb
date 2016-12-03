@@ -1,6 +1,7 @@
 require_relative ('../models/day')
 require_relative ('../models/burger')
 require_relative ('../models/restaurant')
+require_relative ('../models/review')
 require ('pry-byebug')
 
 # inputting days of the week
@@ -239,6 +240,21 @@ burger14 = Burger.new({
   "likes" => 0
   })
 burger14.save()
+
+
+review1 = Review.new({
+  "username" => "winnie_ho",
+  "review" => "Burger was ok. Was pretty disappointed by the lack of chips and the salsa, shouldnt even bother putting it on the board. The service could have been better too.",
+  "burger_id" => 3
+  })
+review1.save()
+
+review2 = Review.new({
+  "username" => "hong_shing",
+  "review" => "You ruined it, you ruined it.",
+  "burger_id" => 3
+  })
+review2.save()
 
 binding.pry
 nil

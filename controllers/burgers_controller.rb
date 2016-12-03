@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative ('../models/burger.rb')
 require_relative ('../models/day.rb')
 require_relative ('../models/restaurant.rb')
+require_relative ('../models/review.rb')
 require('pry-byebug')
 
 
@@ -44,9 +45,9 @@ post '/burgers/:id' do
 end
 
 # SHOW a burger by id
-
 get '/burgers/:id' do
   @burger = Burger.find(params[:id])
+  @reviews = @burger.review()
   erb(:"burgers/show")
 end
 

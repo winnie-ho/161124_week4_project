@@ -16,7 +16,7 @@ class Burger
   end
 
   def save()
-    sql = "INSERT INTO burgers ( name, restaurant_id, deal, day_id, likes ) VALUES ( '#{@name}', #{@restaurant_id}, '#{@deal}', #{@day_id}, #{likes} ) RETURNING *;"
+    sql = "INSERT INTO burgers ( name, restaurant_id, deal, day_id, likes ) VALUES ( '#{@name}', #{@restaurant_id}, '#{@deal}', #{@day_id}, #{likes}) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]["id"].to_i
   end
@@ -36,6 +36,12 @@ class Burger
     sql = "SELECT * FROM restaurants WHERE id = #{@restaurant_id};"
     result = SqlRunner.run(sql)
     return result[0]
+  end
+
+  def review()
+    sql = "SELECT * FROM reviews WHERE burger_id = #{@id};"
+    result = SqlRunner.run(sql)
+    reviews = result.map{|hash|Review.new(hash)}
   end
 
   def self.add_like(id)

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>180</y>
+      <w>350</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>object: Class_Restaurant
+--
+id: 1
+name: "Red Squirrel"
+address: "21 Lothian Road, Edinburgh, EH1 2DJ."
+phone: "0131 229 9933"
+map: "/images/map_redsquirrel.png"
+web: "www.redsquirrel.co.uk"
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>30</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>object: Burger
+--
+id: 1
+name: "Cheese Burger"
+restaurant_id: 1
+deal: 2 for 1
+day_id: 1
+likes: 0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>30</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>object: day
+--
+id: 1
+name: "Monday"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>180</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>object: Empty
+--
+empty = [
+"oh no, no deals today!",
+"So sorry, nothing on today",
+"Tough luck, no deals found"
+]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>60</y>
+      <w>70</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>150</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

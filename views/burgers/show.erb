@@ -1,13 +1,15 @@
 <h2>WHAT'S THE DEALIO?!</h2>
 
+<div class = "container">
 <div class = "details_container">
 
   <ul class = "details_box">
     <li class = "details_text"> <h2 style = "text-align: left"> <%= @burger.name %>s</h2> </li>
     <li class = "details_text"> <h2 style = "text-align: left"> <%= @burger.deal %> on <%= @burger.day_available %>s </h2> </li>
     <li class = "details_text"> <h4> <%= @burger.restaurant["name"] %> </h4> </li>
+    <li class = "details_text"> <p> <%= @burger.restaurant["address"] %> </p> </li>
     <li class = "details_text"> <a href = http://<%= @burger.restaurant["web"] %> style = "margin-left: -2px" > <%= @burger.restaurant["web"] %> </a> </li>
-    <li class = "details_text"> <p><%= @burger.restaurant["phone"] %></p> </li>
+    <li class = "details_text"> <p> <%= @burger.restaurant["phone"] %> </p> </li>
     <li class = "details_text"> <h5> Belly likes: <%= @burger.likes %> </h5> </li>
     
 
@@ -16,12 +18,16 @@
       <input class = "btn" type = "submit" value = "👍Like"/>
     </form> 
   &nbsp;
-    <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
-      <input class = "btn" type = "submit" value = "Delete"/>
-    </form>
+  <form action = "/reviews/<%= @burger.id %>/new" method = "get">
+    <input class = "btn" type = "submit" value = "Review"/>
+  </form> 
   &nbsp;
     <form action = "<%= @burger.id %>/edit" method = "get">
       <input class = "btn" type = "submit" value = "Edit"/>
+    </form>
+  &nbsp;
+    <form action = "/burgers/<%= @burger.id %>/delete" method = "post">
+      <input class = "btn" type = "submit" value = "Delete"/>
     </form>
   </nav>
 
@@ -34,5 +40,18 @@
       <img src = <%= @burger.restaurant["map"]  %> />
     </div>
   <%end%>
-</div>
 
+</div>
+  <div class = "reviews_container">
+    <h2>How was it?</h2>
+
+    <%for review in @reviews%>
+      <ul>
+          <li class="table_item"> <h6>Username</h6> <p> <%= review.username %> </p> </li>
+          <li class="table_item"> <h6>Review</h6> <p> <%= review.review%> </p> </li>
+      </ul>
+    <%end%>
+
+    </div>
+  </div>
+</div>

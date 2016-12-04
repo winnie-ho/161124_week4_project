@@ -108,10 +108,10 @@ a:hover{
 }
 
 .container{
-  padding: 20px;
+  padding: 10px;
   border: solid 1px white;
   border-radius: 5px;
-  margin: 10px;
+  margin: 5px;
   align-content: center;
 
 }
@@ -200,12 +200,33 @@ textarea{
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  margin: 5px;
+  margin-top: -10px;
+  padding-top: -10px;
 }
 
-.reviews_head{
-  display: inline-flex;
+.review_card{
+  border: white solid 1px;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  padding: 15px;
+  padding-bottom: 1px;
+  justify-content: space-between;
+}
+
+.review_details{
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+
+}
+
+.review_delete{
+  border: red dashed 1px;
+  display: flex;
+  align-content: flex-end;
 }
 
 .form_container{
@@ -341,8 +362,10 @@ hr{
 }
 
 span{
+  font-family: "opendyslexicmono";
   color: greenyellow;
   font-weight: bold;
+  font-size: 14px;
 }
 
 

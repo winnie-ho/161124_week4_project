@@ -43,20 +43,27 @@
   <%end%>
 
 </div>
-  <div class = "reviews_container">
-    <h2>How was it?</h2>
 
-    <%for review in @reviews%>
-      <ul>
-          <li class="table_item"> <h6>Username</h6> <p> <%= review.username %> </p> </li>
-          <li class="table_item"> <h6>Review</h6> <p> <%= review.review%> </p> </li>
-          <form action = "/reviews/<%= @burger.id %>/<%= @burger.reviews[0].id%>/delete" method = "post">
+      <% if @burger.reviews.count > 0 %>
+        <div class = "reviews_container">
+          <h2>Reviews</h2>
+          <%for review in @reviews%>
+              <div class = "review_card">
 
-            <input class = "btn" type = "submit" value = "Delete"/>
-          </form>
-      </ul>
-    <%end%>
+                <div class = "review_details">
+                <p><span>Username: </span> <%= review.username %> </p> 
+                <p><span>Review: </span> <%= review.review%> </p>
+                </div>
 
-    </div>
+
+                  <form style = "text-align: right" action = "/reviews/<%= @burger.id %>/<%= @burger.reviews[0].id%>/delete" method = "post">
+                    <input class = "btn" type = "submit" value = "Delete"/>
+                  </form>
+
+              </div>
+          <%end%>
+        </div>
+      <%end%>
+
   </div>
 </div>

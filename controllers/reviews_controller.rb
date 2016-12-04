@@ -18,3 +18,10 @@ post '/reviews/:id' do
   review.save()
   redirect to ('burgers/'+ params[:burger_id])
 end
+
+# DELETE a review from the db
+post '/reviews/:burger_id/:id/delete' do
+  @burger = Burger.find(params[:burger_id])
+  @burger.reviews[params[:id].to_i].delete
+  redirect to ('burgers/'+ params[:burger_id])
+end

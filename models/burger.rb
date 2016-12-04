@@ -38,7 +38,7 @@ class Burger
     return result[0]
   end
 
-  def review()
+  def reviews()
     sql = "SELECT * FROM reviews WHERE burger_id = #{@id};"
     result = SqlRunner.run(sql)
     reviews = result.map{|hash|Review.new(hash)}

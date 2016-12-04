@@ -47,7 +47,7 @@ end
 # SHOW a burger by id
 get '/burgers/:id' do
   @burger = Burger.find(params[:id])
-  @reviews = @burger.review()
+  @reviews = @burger.reviews()
   erb(:"burgers/show")
 end
 

@@ -10,7 +10,7 @@ attr_reader :id
     @username = options["username"]
     @review = options ["review"]
     @burger_id = options ["burger_id"]
-    @id = options ["id"]
+    @id = options ["id"].to_i
   end
 
   def save()
@@ -19,7 +19,7 @@ attr_reader :id
     @id = result[0]["id"].to_i
   end
 
-  def delete(id)
+  def delete()
     sql = "DELETE FROM reviews WHERE id = #{id};"
     SqlRunner.run(sql)
   end
@@ -45,4 +45,8 @@ attr_reader :id
      SqlRunner.run(sql)
   end
 
+   def self.delete(id)
+     sql = "DELETE FROM reviews WHERE id = #{id};"
+     SqlRunner.run(sql)
+   end
 end

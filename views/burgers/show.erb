@@ -11,6 +11,7 @@
     <li class = "details_text"> <a href = http://<%= @burger.restaurant["web"] %> style = "margin-left: -2px" > <%= @burger.restaurant["web"] %> </a> </li>
     <li class = "details_text"> <p> <%= @burger.restaurant["phone"] %> </p> </li>
     <li class = "details_text"> <h5> Belly likes: <%= @burger.likes %> </h5> </li>
+    <li class = "details_text"> <h5> Reviews: <%= @burger.reviews.count %> </h5> </li>
     
 
   <nav>
@@ -49,6 +50,10 @@
       <ul>
           <li class="table_item"> <h6>Username</h6> <p> <%= review.username %> </p> </li>
           <li class="table_item"> <h6>Review</h6> <p> <%= review.review%> </p> </li>
+          <form action = "/reviews/<%= @burger.id %>/<%= @burger.reviews[0].id%>/delete" method = "post">
+
+            <input class = "btn" type = "submit" value = "Delete"/>
+          </form>
       </ul>
     <%end%>
 

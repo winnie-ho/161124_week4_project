@@ -26,12 +26,6 @@ MVP
 	- The day that the deal is available on e.g. "Wednesday"
 - Show the deals available for each day of the week Mon - Sun
 
-Extensions
-
-Users can create groups. Users can have many groups. User can add message to the group. Add Google map API to event to show planned routes. *Add Strava API so that user can select from their own previous routes. Implement weather API to show conditions for an upcoming event.
-
-
-
 ---------------------------------------------------------
 Ensure all ruby gems are installed. Installed gems are:
 	gem install pg
